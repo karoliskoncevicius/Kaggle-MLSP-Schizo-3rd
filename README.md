@@ -49,7 +49,7 @@ from points that are farther away.
 
 ```mathjax
 
-(\mu_1 - \mu_2) = \frac{1}{\sqrt{n}} * \delta
+\sum_{i=1}
 
 ```
 
