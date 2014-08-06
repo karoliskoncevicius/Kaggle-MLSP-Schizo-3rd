@@ -47,6 +47,8 @@ The DWD approach is to take all of the distances from samples to the separating 
 these distances to in fluence the separation boundary is to minimize the sum of the inverse distances. This gives high significance to those points that are close to the hyperplane, with little impact
 from points that are farther away.
 
+![formula1](http://www.sciweavers.org/tex2img.php?eq=%5Cmin_%7Br%2Cw%2C%5Cbeta%2C%5Cxi%7D%20%5Csum_i%20%281%2Fr_i%29%20%2B%20Ce%27%20%5Cxi%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0) 
+
 In this case the solution that has more points farther away from the support vectros and separating hyperplane is preferable over the same margin-size solution with data points pilled close to support vectors.
 
 #### 3.2 Implementation.
