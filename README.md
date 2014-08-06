@@ -5,7 +5,7 @@ README
 
 *Author: Karolis Koncevicius*
 
-*Email: Karolis Koncevicius *
+*Email: Karolis Koncevicius*
 
 *Location: Vilnius University, Vilnius, Lithuania*
 
@@ -13,6 +13,7 @@ README
 
 
 ### 1. Summary
+
 The goal of the competition (https://www.kaggle.com/c/mlsp-2014-mri) was to automatically detect subjects with schizophrenia based on multimodal features derived from the magnetic resonance imaging (MRI) data.
 The data used for this task had a peculiar property of having more features than available samples. Such situations are often called "High Dimensional Small Sample Size Data" (HDLSS) [1] in the literature and often
 present a lot of challenges in both model selection and error estimation [2]. To overcome these difficulties I utilized the Distance Weighted Discrimination (DWD) [3] method which was designed to deal with
@@ -20,6 +21,7 @@ HDLSS settings. My winning entry was very simple: I used all of the available fe
 
 
 ### 2. Feature Selection
+
 3rd place winning entry used no feature selection.
 
 I also tried implementing a number of unsupervised feature selection methods: removing features with low variance, doing Principal Component Analysis (PCA), removing highly correlated features; But these approaches
@@ -45,7 +47,7 @@ The DWD approach is to take all of the distances from samples to the separating 
 these distances to in fluence the separation boundary is to minimize the sum of the inverse distances. This gives high significance to those points that are close to the hyperplane, with little impact
 from points that are farther away.
 
-\\[ \mu_1 = (\frac{1}{\sqrt{n}}, \frac{1}{\sqrt{n}}, ..., \frac{1}{\sqrt{n}}) \\]
+$$ \mu_1 = (\frac{1}{\sqrt{n}}, \frac{1}{\sqrt{n}}, ..., \frac{1}{\sqrt{n}}) $$
 
 In this case the solution that has more points farther away from the support vectros and separating hyperplane is preferable over the same margin-size solution with data points pilled close to support vectors.
 
@@ -61,6 +63,7 @@ clear that lower values had lower classification accuracies and the roc-area rea
 for the submission.
 
 ### 4. Code Description
+
 All the code needed to generate the solution is assembled into one R-script file. It was devided into 6 clearly-defined sections:
 
 1. Sources: This loads all the libraries and sets the main directory path.
@@ -82,6 +85,7 @@ The most lenghty step is cross-validation. This step can be skipped to save time
 
 
 ### 7. Additional Comments and Observations
+
 Arguably the hardest part in this competition was not overfitting. With small amount of available samples it becomes hard to track the true error of misclassification. Cross validation may be
 non-reliable [8] especially if used multiple times on the same data with different models. If no a-priori information is available then simple and highly regularized models become the method of choice [9].
 
