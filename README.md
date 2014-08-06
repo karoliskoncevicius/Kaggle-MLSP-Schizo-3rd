@@ -47,7 +47,11 @@ The DWD approach is to take all of the distances from samples to the separating 
 these distances to in fluence the separation boundary is to minimize the sum of the inverse distances. This gives high significance to those points that are close to the hyperplane, with little impact
 from points that are farther away.
 
-$$ (\mu_1 - \mu_2) = \frac{1}{\sqrt{n}} * \delta $$
+```mathjax
+
+(\mu_1 - \mu_2) = \frac{1}{\sqrt{n}} * \delta
+
+```
 
 In this case the solution that has more points farther away from the support vectros and separating hyperplane is preferable over the same margin-size solution with data points pilled close to support vectors.
 
