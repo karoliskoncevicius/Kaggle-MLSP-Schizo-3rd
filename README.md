@@ -14,7 +14,7 @@ README
 
 ### 1. Summary
 
-The goal of the competition (https://www.kaggle.com/c/mlsp-2014-mri) was to automatically detect subjects with schizophrenia based on multimodal features derived from the magnetic resonance imaging (MRI) data.
+The goal of the competition [0] was to automatically detect subjects with schizophrenia based on multimodal features derived from the magnetic resonance imaging (MRI) data.
 The data used for this task had a peculiar property of having more features than available samples. Such situations are often called "High Dimensional Small Sample Size Data" (HDLSS) [1] in the literature and often
 present a lot of challenges in both model selection and error estimation [2]. To overcome these difficulties I utilized the Distance Weighted Discrimination (DWD) [3] method which was designed to deal with
 HDLSS settings. My winning entry was very simple: I used all of the available features, ran ten fold cross-validation to determine the penalty parameter and then fitted the DWD model.
@@ -101,6 +101,8 @@ DWD) but in the end it could not beat out-of-the box DWD neighter in my internal
 Data subset made available for training had an unequal number of cases and controls. If the final test subset also had this propery then one potential improvement could be taking the class-imbalance into account.
 
 ### 8. References
+
+[0] https://www.kaggle.com/c/mlsp-2014-mri
 
 [1] Peter Hall, J. S. Marron, Amnon Neeman. Geometric representation of high dimension, low sample size data. Journal of the Royal Statistical Society: Series B (Statistical Methodology) Volume 67, Issue 3, pages 427-444, June 2005.
 
