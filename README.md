@@ -47,12 +47,12 @@ The DWD approach is to take all of the distances from samples to the separating 
 these distances to in fluence the separation boundary is to minimize the sum of the inverse distances. This gives high significance to those points that are close to the hyperplane, with little impact
 from points that are farther away.
 
-![formula1](http://www.sciweavers.org/tex2img.php?eq=%5Cmin_%7Br%2Cw%2C%5Cbeta%2C%5Cxi%7D%20%5Csum_i%20%281%2Fr_i%29%20%2B%20Ce%27%20%5Cxi%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0) 
+![formula1](http://www.sciweavers.org/tex2img.php?eq=%5Cmin_%7Bw%2Cb%2Cr%2Cz%7D%20%5Csum_i%20%281%2Fr_i%29%20%2B%20Ce%27z&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 
-![formula2](http://www.sciweavers.org/tex2img.php?eq=r%20%3D%20YX%27w%20%2B%20%5Cbeta%20Y%20%2B%20%5Cxi%2C%20%5C%20%5C%20%20%20r%20%5Cgeq%200%2C%5C%20%5C%20%20%5Cxi%20%20%5Cgeq%200&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![formula2](http://www.sciweavers.org/tex2img.php?eq=r%20%3D%20YX%27w%20%2B%20b%20Y%20%2B%20z%2C%20%5C%20%5C%20%20%20r%20%5Cgeq%200%2C%5C%20%5C%20%20z%20%20%5Cgeq%200&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 
-Here *e* is a vector of ones, *w* and *beta* are parameters of the hyperplane, *X* is the data matrix, *Y* is a diagonal matrix with class-labels in the diagonal (1 or -1), *C* is missclasification penalty cost
-and "xi" is perturbation vector which allows some of the points to be missclasified. In turn *r* is the distance from a sample point to the hyperplane.
+Here *e* is a vector of ones, *w* and *b* are parameters of the hyperplane, *X* is the data matrix, *Y* is a diagonal matrix with class-labels in the diagonal (1 or -1), *C* is missclasification penalty cost
+and *z* is perturbation vector which allows some of the points to be missclasified. In turn *r* is the vector of distances from a sample point to the hyperplane.
 
 In this case the solution that has more points farther away from the support vectros and separating hyperplane is preferable over the same margin-size solution with data points pilled close to support vectors.
 
